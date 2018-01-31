@@ -6,17 +6,27 @@ require_relative("../hiddenword.rb")
 class HiddenWordTest < MiniTest::Test
 
   def setup
-    @word = HiddenWord.new("The Avengers")
+    @word = HiddenWord.new("The Post")
   end
 
   def test_returns_word
-    assert_equal("The Avengers", @word.returns_word)
+    assert_equal("The Post", @word.returns_word)
   end
 
-def test_returns_word_characters
-  @word = HiddenWord.new("The Post")
-  assert_equal(["t","h","e", " ", "p","o","s","t"], @word.word_to_characters())
-end
+  def test_returns_word_characters
+    @word = HiddenWord.new("The Post")
+    assert_equal(["t","h","e", " ", "p","o","s","t"], @word.word_to_characters())
+  end
+
+  def test_hide_word
+    assert_equal("*** ****", @word.hide_word)
+  end
+
+  def test_display_correct_letters
+    guess = "t"
+    @hiddenword.display_correct_letters(guess)
+    assert_equal("t** ***t", @hiddenword.display_correct_letters())
+  end
 
 end
 
