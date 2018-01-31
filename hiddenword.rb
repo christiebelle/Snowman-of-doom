@@ -40,10 +40,18 @@ class HiddenWord
     return @hiddenword
   end
 
-
-
-
+  def true_or_false(guess)
+    word_to_characters()
+    for letters in @word
+      if guess == letters
+        return true
+      else
+        return false
+      end
+    end
   end
+
+end
 
 # MVP
 #

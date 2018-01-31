@@ -23,9 +23,12 @@ class HiddenWordTest < MiniTest::Test
   end
 
   def test_display_correct_letters
-    # guess = "t"
-    # @hiddenword.display_correct_letters(guess)
     assert_equal("t** ***t", @word.display_correct_letters("t"))
+  end
+
+  def test_true_or_false
+    assert_equal(true, @word.true_or_false("t"))
+    # assert_equal(true, @word.true_or_false("t"))
   end
 
 end
