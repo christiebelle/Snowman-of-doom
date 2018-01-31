@@ -27,9 +27,12 @@ class HiddenWord
 
   def display_correct_letters(guess)
     word_to_characters()
-    for letters in @hiddenword
+    for letters in @word
       if guess == letters
         @hiddenword += guess
+      elsif
+        letters == " "
+        @hiddenword += " "
       else
         @hiddenword += "*"
       end
