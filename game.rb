@@ -1,3 +1,17 @@
+class Game
+
+  def initialize(players, word)
+    @playas = players
+    @word = word
+    @guessed_letters = []
+  end
+
+  def player_details
+    return "#{@name} has #{@lives} lives"
+  end
+
+end
+
 
 # MVP
 #

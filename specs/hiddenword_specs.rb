@@ -13,9 +13,10 @@ class HiddenWordTest < MiniTest::Test
     assert_equal("The Avengers", @word.returns_word)
   end
 
-  def test_redaction
-    assert_equal("*** ********", @word.redaction)
-  end
+def test_returns_word_characters
+  @word = HiddenWord.new("The Post")
+  assert_equal(["t","h","e", " ", "p","o","s","t"], @word.word_to_characters())
+end
 
 end
 

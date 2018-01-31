@@ -9,6 +9,13 @@ class HiddenWord
     return @word
   end
 
+def word_to_characters()
+  @hiddenword = @word.downcase().split(//)
+  p @hiddenword
+end
+
+
+
 end
 
 # MVP

@@ -1,4 +1,19 @@
+require("minitest/autorun")
+require("minitest/rg")
 
+require_relative("../game.rb")
+require_relative("../hiddenword.rb")
+require_relative("../player.rb")
+
+class GameTest < MiniTest::Test
+
+  def setup
+    @new_game = Game.new(2, "The Avengers")
+    @playa1 = Player.new("Player 1", 6)
+    @playa2 = Player.new("Player 2", 6)
+  end
+
+end
 # MVP
 #
 # A Game will have properties for a Player object,
